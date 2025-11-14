@@ -2,7 +2,7 @@
 import { GoogleGenAI, Type, Chat } from "@google/genai";
 import { FruitTree, ChatMessage } from '../types';
 
-const API_KEY = process.env.API_KEY;
+const API_KEY = process.env.API_KEY || process.env.GEMINI_API_KEY;
 if (!API_KEY) {
   throw new Error("API_KEY environment variable is not set.");
 }

@@ -15,6 +15,20 @@ View your app in AI Studio: https://ai.studio/apps/temp/1
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+2. Set the `GEMINI_API_KEY` and `API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## Configuração da API
+
+Para obter a sua chave da API do Google Gemini:
+
+1. Acesse [Google AI Studio](https://aistudio.google.com/)
+2. Faça login com sua conta Google
+3. Clique em "Get API Key" para criar uma nova chave
+4. Adicione a chave nos arquivos `.env` e `.env.local` como mostrado abaixo:
+
+```
+GEMINI_API_KEY=SUA_CHAVE_DA_API_AQUI
+API_KEY=SUA_CHAVE_DA_API_AQUI
+```
