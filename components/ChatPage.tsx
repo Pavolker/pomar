@@ -49,7 +49,7 @@ const ChatPage: React.FC<ChatPageProps> = ({ onBack }) => {
   }
 
   return (
-    <div className="flex flex-col h-screen bg-green-50/80" style={{backgroundImage: `url('https://www.transparenttextures.com/patterns/subtle-leaves.png')`}}>
+    <div className="flex flex-col h-screen bg-green-50/80" style={{backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2322c55e' fill-opacity='0.1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E")`}}>
       <header className="flex items-center p-4 bg-white shadow-md z-10 border-b border-green-200">
         <button
           onClick={onBack}

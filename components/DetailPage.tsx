@@ -21,7 +21,7 @@ const InfoCard: React.FC<{ icon: React.ReactNode; title: string; children: React
 
 const DetailPage: React.FC<DetailPageProps> = ({ tree, onBack, onAskGardener }) => {
   return (
-    <div className="min-h-screen bg-lime-50" style={{backgroundImage: `url('https://www.transparenttextures.com/patterns/subtle-leaves.png')`}}>
+    <div className="min-h-screen bg-lime-50" style={{backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2322c55e' fill-opacity='0.1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E")`}}>
       <div className="relative">
         <img src={`https://picsum.photos/seed/${tree.name.replace(/\s/g, '')}/1200/400`} alt={`Imagem de ${tree.name}`} className="w-full h-64 object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-lime-50 to-transparent"></div>

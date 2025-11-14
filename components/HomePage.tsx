@@ -44,7 +44,7 @@ const HomePage: React.FC<HomePageProps> = ({ onSearchComplete, onGoToChat, setLo
   };
 
   return (
-    <div className="min-h-screen bg-green-50 text-gray-800 p-4 sm:p-6 lg:p-8" style={{backgroundImage: `url('https://www.transparenttextures.com/patterns/subtle-leaves.png')`}}>
+    <div className="min-h-screen bg-green-50 text-gray-800 p-4 sm:p-6 lg:p-8" style={{backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2322c55e' fill-opacity='0.1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E")`}}>
       <div className="max-w-4xl mx-auto">
         <header className="text-center my-8 sm:my-12">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-emerald-800">Pomar de Casa</h1>
