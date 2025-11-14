@@ -1,3 +1,4 @@
+import './src/index.css';
 const CSV_PATH=encodeURI('FRUTA CASA.csv')
 const months=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro']
 let frutas=[]
