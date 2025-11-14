@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/app.js"
+  [headers.values]
+    cache-control = "public, max-age=60"
