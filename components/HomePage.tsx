@@ -47,7 +47,7 @@ const HomePage: React.FC<HomePageProps> = ({ onSearchComplete, onGoToChat, setLo
     <div className="min-h-screen bg-green-50 text-gray-800 p-4 sm:p-6 lg:p-8" style={{backgroundImage: `url('https://www.transparenttextures.com/patterns/subtle-leaves.png')`}}>
       <div className="max-w-4xl mx-auto">
         <header className="text-center my-8 sm:my-12">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-emerald-800">Pomar de Casa</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-emerald-800">Pomar Casa Y7</h1>
           <p className="mt-4 text-lg text-emerald-700">Seu guia para um pomar saudável e produtivo.</p>
         </header>
 
