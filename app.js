@@ -265,8 +265,12 @@ async function getTreeInfo(name){
 }
 
 async function enrichFields(name){
+  const cache=JSON.parse(localStorage.getItem('enrich')||'{}')
+  if(cache[name]&&cache[name].frutificacao&&cache[name].adubacao&&cache[name].nutriente){
+    return cache[name]
+  }
   const key=localStorage.getItem('GEMINI_API_KEY')||window.GEMINI_API_KEY||''
-  if(!key){return null}
+  if(!key){return cache[name]||null}
   const mod=await import('@google/genai')
   const ai=new mod.GoogleGenAI({apiKey:key})
   const prompt=`Para a espécie "${name}", informe somente para o Brasil: (1) Meses de Frutificação (formato: "Mês a Mês" ou "Todo o ano"); (2) Época ideal para Adubação (ex.: "Março a maio"); (3) Nutriente-chave (um entre Nitrogênio, Fósforo, Potássio, Cálcio, Magnésio). Responda em JSON com campos {"frutificacao","adubacao","nutriente"}.`
@@ -274,13 +278,11 @@ async function enrichFields(name){
     const resp=await ai.models.generateContent({model:'gemini-2.5-flash',contents:prompt,config:{responseMimeType:'application/json'}})
     const data=JSON.parse(resp.text.trim())
     if(data&&data.frutificacao&&data.adubacao&&data.nutriente){
-      const cache=JSON.parse(localStorage.getItem('enrich')||'{}')
       cache[name]=data
       localStorage.setItem('enrich',JSON.stringify(cache))
       return data
     }
   }catch(e){/* noop */}
-  const cache=JSON.parse(localStorage.getItem('enrich')||'{}')
   return cache[name]||null
 }
 
