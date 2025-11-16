@@ -78,6 +78,12 @@ function fruitSvg(name){
   return generic
 }
 
+function renderSimple(){
+  const root=document.getElementById('root')
+  if(!root) return
+  root.innerHTML=`<div class="min-h-screen flex items-center justify-center bg-emerald-50" style="background-image:url('${SUBTLE_LEAVES_TEXTURE}')"><div class="text-center"><div class="w-12 h-12 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin mx-auto mb-6"></div><p class="text-emerald-800 text-lg font-medium">Carregando informações do pomar...</p></div></div>`
+}
+
 function updateFeaturedIcons(){
   document.querySelectorAll('[data-name]').forEach(el=>{
     const n=el.getAttribute('data-name')
